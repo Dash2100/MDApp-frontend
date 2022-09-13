@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>明道學+</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap'>
+    <link rel="stylesheet" href="./home.css">
+    <!-- Apple Webapp -->
+    <meta name="apple-mobile-web-app-title" content="明道學+">
+    <link rel="apple-touch-icon" href="./MDPlus.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+        href="./launch.jpg">
+    <!-- Sweet Alert2 -->
+    <link rel="stylesheet" href="./sweetalert2.min.css">
+    <script src="./sweetalert2.min.js"></script>
+    <!-- JS -->
+    <script src="./home.js"></script>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/ccca8bf96e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <nav class="topbar">
+            <h3 class="bartitle">MDLearning Plus</h3>
+            <i class="fa-solid fa-gear"></i>
+        </nav>
+        <!-- page1 -->
+        <div class="div" id="page1">
+            <h3 class="title">常用功能</h3>
+            <div class="pods">
+                <div class="pod">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="pod">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="pod">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="pod">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="pod">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>
+        </div>
+        <!-- page2 -->
+        <div class="div" id="page2" style="display:none">
+            <h3 class="title">自動化工具</h3>
+        </div>
+        <!-- page3 -->
+        <div class="div" id="page3" style="display:none">
+            <h3 class="title">帳號管理</h3>
+        </div>
+        <!-- ctrl-bar -->
+        <nav class="tabbar" id="info">
+            <div>
+                <input id="menu-1" type="radio" name="menu" value='home' checked>
+                <label for="menu-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="currentColor" x="0px" y="0px"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"
+                        width="512" height="512">
+                        <path
+                            d="M256,319.841c-35.346,0-64,28.654-64,64v128h128v-128C320,348.495,291.346,319.841,256,319.841z" />
+                        <path
+                            d="M362.667,383.841v128H448c35.346,0,64-28.654,64-64V253.26c0.005-11.083-4.302-21.733-12.011-29.696l-181.29-195.99    c-31.988-34.61-85.976-36.735-120.586-4.747c-1.644,1.52-3.228,3.103-4.747,4.747L12.395,223.5    C4.453,231.496-0.003,242.31,0,253.58v194.261c0,35.346,28.654,64,64,64h85.333v-128c0.399-58.172,47.366-105.676,104.073-107.044    C312.01,275.383,362.22,323.696,362.667,383.841z" />
+                        <path
+                            d="M256,319.841c-35.346,0-64,28.654-64,64v128h128v-128C320,348.495,291.346,319.841,256,319.841z" />
+                    </svg>
+                    <span>首頁</span>
+                </label>
+                <input id="menu-2" type="radio" name="menu" value='tool'>
+                <label for="menu-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 24 24" width="512" height="512"
+                        fill="currentColor">
+                        <path
+                            d="M10.247,9.752l4.187-4.186,4,4-4.186,4.187ZM8.833,11.166l-8,8a2.829,2.829,0,0,0,2,4.829,2.806,2.806,0,0,0,2-.829l8-8ZM18.667,17.3,20,19.962,21.333,17.3,24,15.962l-2.667-1.334L20,11.962l-1.333,2.666L16,15.962Zm-12-11.962L8,8,9.333,5.333,12,4,9.333,2.667,8,0,6.667,2.667,4,4Zm12.666-.666L20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z" />
+                    </svg>
+                    <span>工具</span>
+                </label>
+                <input id="menu-3" type="radio" name="menu" value='account'>
+                <label for="menu-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 24 24" width="512" height="512"
+                        fill="currentColor">
+                        <path
+                            d="M16.043,14H7.957A4.963,4.963,0,0,0,3,18.957V24H21V18.957A4.963,4.963,0,0,0,16.043,14Z" />
+                        <circle cx="12" cy="6" r="6" />
+                    </svg>
+                    <span>帳號</span>
+                </label>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+    <script>
+        $('input[type=radio][name="menu"]').on('change', function () {
+            switch ($(this).val()) {
+                case 'home':
+                    page1()
+                    break
+                case 'tool':
+                    page2()
+                    break
+                case 'account':
+                    page3()
+                    break
+            }
+        })
+        
+        function isIOSDevice(){
+            if(!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)){
+                document.getElementById("info").style.paddingBottom = "35px";
+            }
+            else{
+                document.getElementById("info").style.paddingBottom = "15px";
+            }
+        }
+        isIOSDevice();
+    </script>
+</body>
+
+</html>
