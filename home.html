@@ -7,6 +7,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>明道學+</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap'>
     <link rel="stylesheet" href="./home.css">
@@ -15,6 +16,7 @@
     <link rel="apple-touch-icon" href="./MDPlus.jpg">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1e1d21" />
     <link rel="apple-touch-startup-image"
         media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
         href="./launch.jpg">
@@ -27,32 +29,73 @@
     <script src="https://kit.fontawesome.com/ccca8bf96e.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="App" onload="isIOSDevice();">
     <div>
-        <nav class="topbar">
-            <h3 class="bartitle">MDLearning Plus</h3>
-            <i class="fa-solid fa-gear"></i>
-        </nav>
+        <section id="topNav">
+            <nav class="topbar">
+                <h3 class="bartitle">MDLearning Plus</h3>
+                <i class="fa-solid fa-gear"></i>
+            </nav>
+        </section>
         <!-- page1 -->
-        <div class="div" id="page1">
-            <h3 class="title">常用功能</h3>
-            <div class="pods">
-                <div class="pod">
-                    <i class="fa-solid fa-gear"></i>
+        <div class="page" id="page1">
+            <div class="news">
+                <div class="top">
+                    <a class="title">校園公告</a>
+                    <a class="more">查看所有公告</a>
                 </div>
-                <div class="pod">
-                    <i class="fa-solid fa-gear"></i>
-                </div>
-                <div class="pod">
-                    <i class="fa-solid fa-gear"></i>
-                </div>
-                <div class="pod">
-                    <i class="fa-solid fa-gear"></i>
-                </div>
-                <div class="pod">
-                    <i class="fa-solid fa-gear"></i>
+                <div class="list">
+                    <h3 class='newsTitle'>提醒9月19日當週課外社團開始上課</h3>
+                    <h3 class='newsSubtitle'>2022-09-15 09:54 學生事務處</h3>
+                    <hr>
+                    <h3 class='newsTitle'>2023年第55屆國際化學奧林匹亞競賽</h3>
+                    <h3 class='newsSubtitle'>2022-09-15 09:33 高中部</h3>
+                    <hr>
+                    <h3 class='newsTitle'>[教務處] 111年全民英檢培訓課程招生報名延長至9/16中午止</h3>
+                    <h3 class='newsSubtitle'>2022-09-15 09:54 	學生事務處</h3>
                 </div>
             </div>
+            <div class="Funcs">
+                <div class="top">
+                    <a class="title">常用功能</a>
+                    <a class="more">查看所有功能</a>
+                </div>
+                <div class="pods">
+                    <div class="pod">
+                        <i class="fa-solid fa-gear"></i><br>
+                        <a class='name'>個人課表</a>
+                    </div>
+                    <div class="pod">
+                        <i class="fa-solid fa-gear"></i><br>
+                        <a class='name'>缺曠查詢</a>
+                    </div>
+                    <div class="pod">
+                        <i class="fa-solid fa-gear"></i><br>
+                        <a class='name'>成績查詢</a>
+                    </div>
+                    <div class="pod">
+                        <i class="fa-solid fa-gear"></i><br>
+                        <a class='name'>校車資訊</a>
+                    </div>
+                    <div class="pod">
+                        <i class="fa-solid fa-gear"></i><br>
+                        <a class='name'>活動報名</a>
+                    </div>
+                    <div class="pod">
+                        <i class="fa-solid fa-gear"></i><br>
+                        <a class='name'>請假系統</a>
+                    </div>
+                    <div class="pod">
+                        <i class="fa-solid fa-gear"></i><br>
+                        <a class='name'>報修系統</a>
+                    </div>
+                    <div class="pod">
+                        <i class="fa-solid fa-gear"></i><br>
+                        <a class='name'>EATs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <!-- page2 -->
         <div class="div" id="page2" style="display:none">
@@ -117,15 +160,14 @@
             }
         })
         
-        function isIOSDevice(){
-            if(!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)){
-                document.getElementById("info").style.paddingBottom = "35px";
-            }
-            else{
-                document.getElementById("info").style.paddingBottom = "15px";
-            }
-        }
-        isIOSDevice();
+        // $(window).on("deviceorientation resize", function( event ) {
+        //     if (window.matchMedia("(orientation: portrait)").matches) {
+        //         document.getElementById("App").style.display = "block";
+        //     }
+        //     if (window.matchMedia("(orientation: landscape)").matches) {
+        //         document.getElementById("App").style.display = "none";
+        //     }
+        // });
     </script>
 </body>
 
